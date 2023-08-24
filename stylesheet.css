@@ -1,0 +1,14 @@
+#holder{
+    display: grid;
+    grid-auto-rows: 50px;
+    grid-template-columns: repeat(16, 50px);
+    gap:1px;
+
+    
+}
+
+.Square{
+    width:50px;
+    height:50px;
+    outline: solid 2px black;
+}
