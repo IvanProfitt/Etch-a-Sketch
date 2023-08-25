@@ -1,9 +1,25 @@
-window.onload=addDivs();
 let isMouseDown = false;
+const range = document.getElementById("myRange");
+const container = document.getElementById("holder");
+let divSize=range.value*range.value;
+window.onload=addDivs(divSize);
 
 
-function addDivs(){
-    for(let x=0;x<256;x+=1){
+function divNum(){
+
+    holder.style.gridTemplateColumns= `repeat(${range.value}, 1fr)`;
+    holder.style.gridTemplateRows= `repeat(${range.value}, 1fr)`;
+
+    clearColor();
+    addDivs(divSize);
+}
+
+
+
+
+function addDivs(divSize){
+    let maxDiv=range.value*range.value;
+    for(let x=0;x<maxDiv;x+=1){
     const newDiv= document.createElement("div");
     newDiv.classList.add("Square");
     newDiv.setAttribute('id', "Square");
@@ -17,9 +33,7 @@ function addDivs(){
 
 }
 
-function divNum(){
-    
-}
+
 
 
         window.addEventListener("mousedown", () => {
@@ -31,13 +45,10 @@ function divNum(){
         });
 
         function changeColor(event) {
-            if (isMouseDown) {
                 event.target.style.backgroundColor = "rgb(51, 51, 51)";
-            }
         }
 
         function clearColor(){
             const squares = document.querySelectorAll(".Square");
             squares.forEach(square => square.removeAttribute("style"));
         }
-

@@ -1,14 +1,30 @@
-#holder{
-    display: grid;
-    grid-auto-rows: 50px;
-    grid-template-columns: repeat(16, 50px);
-    gap:1px;
+body{
+    background-color: grey ;
+    margin:0px;
+    padding:0px;
+}
+header{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom:20px;
 
-    
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#holder{
+    margin:auto;
+    display: grid;
+    min-height:500px;
+    width:500px;
+    background-color: white;
+    border-radius:2px;
+    outline: solid 10px hsl(0, 100%, 40%);
 }
 
 .Square{
-    width:50px;
-    height:50px;
-    outline: solid 2px black;
+    display:flex;
+    align-items: center;
+    outline: solid .5px black;
 }
