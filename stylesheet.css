@@ -2,6 +2,7 @@ body{
     background-color: grey ;
     margin:0px;
     padding:0px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 header{
     background-color: white;
@@ -27,4 +28,28 @@ header{
     display:flex;
     align-items: center;
     outline: solid .5px black;
+}
+
+.options{
+    display:flex;
+    justify-content: center;
+    margin-top:50px;
+}
+#resolution{
+    margin: 0 auto;
+}
+fieldset{
+    border:0;
+}
+
+footer{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    margin-top:20px;
+    position:absolute;
+    bottom:0;
+    width:100%;
+
+
 }

@@ -15,9 +15,20 @@
     <div id="holder" style="grid-template-columns: repeat(16, 1fr); grid-template-rows: repeat(16, 1fr);">
     </div>
 </div>
+<div class="options">
 <input class="clear" type="button" value="Clear" onclick="clearColor();"/>
+<input class="random" type="button" value="RGB!" onclick="randomColorToggle();"/>
+
+<fieldset>
+    <legend id="resolution">16x16</legend>
 <input class="sizeRange" type="range" id="myRange" value="16" min="1" max="64" onchange="divNum();">
+</fieldset>
+</div>
 <footer>
+    <p>Made by Ivan Profitt</p>
+    <a href="https://github.com/IvanProfitt/">
+        <img src="images/25231.png" style="height:50px; width:50px; margin-left:20px;"/>
+    </a>
 
 </footer>
     

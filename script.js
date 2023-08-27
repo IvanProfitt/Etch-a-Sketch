@@ -1,6 +1,9 @@
 let isMouseDown = false;
+let randomColor=false; 
+const randomButton = document.getElementById("random");
 const range = document.getElementById("myRange");
 const container = document.getElementById("holder");
+const caption = document.getElementById("resolution");
 let divSize=range.value*range.value;
 window.onload=addDivs(divSize);
 
@@ -9,11 +12,11 @@ function divNum(){
 
     holder.style.gridTemplateColumns= `repeat(${range.value}, 1fr)`;
     holder.style.gridTemplateRows= `repeat(${range.value}, 1fr)`;
+    caption.innerHTML = `${range.value} x ${range.value}`;
 
     clearColor();
     addDivs(divSize);
 }
-
 
 
 
@@ -33,9 +36,10 @@ function addDivs(divSize){
 
 }
 
+function randomColorToggle(){
+    randomColor=true;
 
-
-
+}
         window.addEventListener("mousedown", () => {
             isMouseDown = true;
         });
@@ -45,7 +49,17 @@ function addDivs(divSize){
         });
 
         function changeColor(event) {
+            if(randomColor===false){
                 event.target.style.backgroundColor = "rgb(51, 51, 51)";
+            }
+            else{
+                var randomNumber = Math.floor(Math.random() * 256);
+                var randomNumber2 = Math.floor(Math.random() * 256);
+                var randomNumber3 = Math.floor(Math.random() * 256);
+
+                event.target.style.backgroundColor=`rgb(${randomNumber},${randomNumber2},${randomNumber3})`;
+            }
+
         }
 
         function clearColor(){
