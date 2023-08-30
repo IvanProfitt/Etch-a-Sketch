@@ -16,14 +16,17 @@
     </div>
 </div>
 <div class="options">
-<input class="clear" type="button" value="Clear" onclick="clearColor();"/>
-<input class="random" type="button" value="RGB!" onclick="randomColorToggle();"/>
+<input class="clear custom-button" type="button" value="Clear" id="color-toggle-button" onclick="clearColor();"/>
+<input class="random custom-button" type="button" value="RGB!" id="color-toggle-button" onclick="randomColorToggle(1);"/>
+<input class="random custom-button" type="button" value="Black" id="color-toggle-button" onclick="randomColorToggle(0);"/>
 
 <fieldset>
     <legend id="resolution">16x16</legend>
 <input class="sizeRange" type="range" id="myRange" value="16" min="1" max="64" onchange="divNum();">
 </fieldset>
 </div>
+
+
 <footer>
     <p>Made by Ivan Profitt</p>
     <a href="https://github.com/IvanProfitt/">

@@ -8,6 +8,7 @@ let divSize=range.value*range.value;
 window.onload=addDivs(divSize);
 
 
+
 function divNum(){
 
     holder.style.gridTemplateColumns= `repeat(${range.value}, 1fr)`;
@@ -36,8 +37,13 @@ function addDivs(divSize){
 
 }
 
-function randomColorToggle(){
-    randomColor=true;
+function randomColorToggle(value){
+    if(value===1){
+        randomColor=true;}
+    else{
+        randomColor=false;
+    }
+
 
 }
         window.addEventListener("mousedown", () => {
